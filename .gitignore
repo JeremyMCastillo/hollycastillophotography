@@ -3,3 +3,5 @@ admin/config.php
 php.ini
 *.sql
 BLOGFILES/
+image/
+images/

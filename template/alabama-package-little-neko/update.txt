@@ -1,0 +1,8 @@
+v1.2
+- added Contact page layout
+- added Team page layout
+- added About us page layout
+- improved site map design
+
+v1.1
+- Added One page layout option

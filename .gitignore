@@ -1,0 +1,5 @@
+config.php
+admin/config.php
+php.ini
+*.sql
+BLOGFILES/

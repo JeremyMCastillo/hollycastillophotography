@@ -9,6 +9,46 @@
         <li style="height:1280px"><img src="image/pages/common/maxholly.jpg" /></li>
     </ul>
 </div>
+<!-- / slider -->
+<div id="reviews-title" class="row">
+  <div class="col-xs-12 text-center">
+    <h2>Client Testimonials</h2>
+  </div>
+</div>
+<div class="row text-center" id="reviews">
+  <div class="cat-photos col-lg-12">
+    <?php $first = true; ?>
+    <?php foreach($reviews as $review) { ?>
+          <img class="<?php echo $first ? 'active' : ''; ?>" src="<?php echo HTTPS_SERVER . 'image/' . $review['image']; ?>" />
+          <?php $first = false; ?>
+    <?php } ?>
+  </div>
+  <div class="col-xs-12 review-block">
+    <div class="row">
+        <?php $first = true; ?>
+        <?php foreach($reviews as $review) { ?>
+          <div class="col-xs-12 review-block-item <?php echo $first ? 'active' : ''; ?>">
+            <div class="row">
+              <div class="col-xs-12"><h1 class="accent"><?php echo $review['author']; ?></h1></div>
+            </div>
+            <div class="row">
+              <div class="col-xs-12"><section><?php echo $review['text']; ?></section></div>
+            </div>
+        </div>
+        <?php $first = false; ?>
+        <?php } ?>
+    </div>
+  </div>
+</div>
+<div id="instagram-feed-title" class="row">
+  <div class="col-xs-12 text-center">
+    <h2>Follow Me On Instagram!</h2>
+  </div>
+</div>
+<div class="row" id="instagram-feed">
+  <ul class="carousel">
+  </ul>
+</div>
 <div id="badge-showcase">
     <div class="row">
         <div class="col-xs-6 col-sm-4 col-lg-2 col-xs-offset-3">
@@ -28,7 +68,21 @@
         </div>
     </div>
 </div>
-<!-- / slider -->
-
-
+<script type="text/javascript">
+  $(function(){
+    $.ajax({
+      url: '<?php echo $instagram_endpoint; ?>',
+      dataType: 'json',
+      success: function(json){
+        console.log(json);
+        for(var i in json){
+          var html = "<li>";
+          html += "<img src='" + json[i]['images']['low_resolution']['url'] + "' />";
+          html += "</li>";
+          $("#instagram-feed ul").append(html);
+        }
+      }
+    });
+  });
+</script>
 <?php echo $footer; ?>

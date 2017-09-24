@@ -742,3 +742,9 @@
 2017-06-11 3:52:24 - PHP Notice:  Error: Unknown column 'name' in 'order clause'<br />Error No: 1054<br />SELECT * FROM `api` ORDER BY name ASC in /home/html/hollycastillo/system/library/db/mysqli.php on line 41
 2017-06-11 3:52:24 - PHP Notice:  Trying to get property of non-object in /home/html/hollycastillo/admin/model/user/api.php on line 77
 2017-06-11 3:52:24 - PHP Warning:  Invalid argument supplied for foreach() in /home/html/hollycastillo/admin/view/template/setting/setting.tpl on line 832
+2017-09-19 1:45:46 - PHP Notice:  Error: Unknown column 'name' in 'order clause'<br />Error No: 1054<br />SELECT * FROM `api` ORDER BY name ASC in /home/html/hollycastillo/system/library/db/mysqli.php on line 41
+2017-09-19 1:45:46 - PHP Notice:  Trying to get property of non-object in /home/html/hollycastillo/admin/model/user/api.php on line 77
+2017-09-19 1:45:46 - PHP Warning:  Invalid argument supplied for foreach() in /home/html/hollycastillo/admin/view/template/setting/setting.tpl on line 832
+2017-09-19 1:54:26 - PHP Notice:  Error: Unknown column 'name' in 'order clause'<br />Error No: 1054<br />SELECT * FROM `api` ORDER BY name ASC in /home/html/hollycastillo/system/library/db/mysqli.php on line 41
+2017-09-19 1:54:26 - PHP Notice:  Trying to get property of non-object in /home/html/hollycastillo/admin/model/user/api.php on line 77
+2017-09-19 1:54:26 - PHP Warning:  Invalid argument supplied for foreach() in /home/html/hollycastillo/admin/view/template/setting/setting.tpl on line 832

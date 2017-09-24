@@ -9,7 +9,8 @@ jQuery(function($){
         speed: 2000,
         delay: 5000,
         arrows: false,
-        infinite: true
+        infinite: true,
+        nav: false
     });
 
     $(window).resize(function(){

@@ -10,8 +10,6 @@
   <!-- Basic Page Needs ALABAMA TEMPLATE HEAD BEGIN
         ================================================== -->
   <meta charset="utf-8">
-  <title><?php echo $title; ?></title>
-  <meta name="description" content="<?php echo $description; ?>">
   <meta name="author" content="Holly Castillo">
   <meta name="p:domain_verify" content="5c14e4bd52a86851107933ddffc7010c"/>
   <!-- Mobile Specific Metas
@@ -141,5 +139,3 @@
     </div>
 </header>
 <!-- header END -->
-
-

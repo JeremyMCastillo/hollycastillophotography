@@ -1,4 +1,4 @@
-/* 
+/*
 Document   : layout
 Author     : Little Neko
 Description: layout styles
@@ -14,8 +14,8 @@ Description: layout styles
 #GENERAL
 #PARALLAX STUFF
 #HEADER
-#MAIN MENU 
-#FOOTER 
+#MAIN MENU
+#FOOTER
 #SLIDERS
 #BLOG
 #NEWS
@@ -71,7 +71,7 @@ Description: layout styles
     padding-bottom: 18px;
     position: absolute;
     width: 100%;
-    min-height: 95px;
+    min-height: 70px;
     background-color: #FFFFFF;
     -webkit-transition: min-height 0.2s ease;
     -moz-transition: min-height 0.2s ease;
@@ -292,12 +292,15 @@ pre code {
 	}
 	.navbar-header {
 		padding-bottom:0;
-        margin-left: auto;
-        margin-right: auto;
-        display: block;
-        position: absolute;
-        float: none;
-        height: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    position: absolute;
+    float: none;
+    height: 0px;
+		-webkit-box-shadow: 3px 3px 3px 0px rgba(170,170,170,0.3);
+		-moz-box-shadow: 3px 3px 3px 0px rgba(170,170,170,0.3);
+		box-shadow: 3px 3px 3px 0px rgba(170,170,170,0.3);
 	}
 	.navbar-collapse {
 		padding-right:0;
@@ -990,7 +993,7 @@ hr {
 }
 
 body {
-    padding-top:95px;
+    padding-top:75px;
 }
 /*** MEDIA QUERIES ***/
 @media(max-width:767px) {
@@ -1260,6 +1263,7 @@ body#onePage #mainHeader.navbar {
     height: auto;
     max-width: 100%;
     max-height: 840px;
+		border-radius: 5px;
 }
 .unslider ul li{
     text-align: center;
@@ -1360,6 +1364,10 @@ body.portfolio-portfolio img{
 
 #badge-showcase{
     text-align: center;
+		padding: 20px 0 20px 0;
+		-webkit-box-shadow: 0px -3px 3px 0px rgba(170,170,170,0.3);
+		-moz-box-shadow: 0px -3px 3px 0px rgba(170,170,170,0.3);
+		box-shadow: 0px -3px 3px 0px rgba(170,170,170,0.3);
 }
 
 /* HEADER================================================== */
@@ -1785,17 +1793,17 @@ ul.quickMenu li a.linkLeft {
 }
 @media(min-width:1349px) {
 	#mainHeader .pull-right {
-        text-align: center;
-        display: inline-block;
-        width: 100%;
-        margin-bottom: -7px;
-        position: relative;
-        top: 45px;
+		text-align: center;
+    display: inline-block;
+    width: 100%;
+    margin-bottom: -7px;
+    position: relative;
+    top: 10px;
 	}
 	.navbar-nav>li>a {
 		font-size:16px;
 		font-weight:300;
-		padding:5px;
+		padding:5px 5px 15px 5px;
 		line-height:40px;
 		vertical-align:middle;
 	}
@@ -1803,10 +1811,10 @@ ul.quickMenu li a.linkLeft {
 		display:block;
 	}
 	.navbar-nav ul {
-		position:absolute;
-        top: 50px;
-		left:0;
-		z-index:1024;
+		position: absolute;
+    top: 60px;
+    left: 0;
+    z-index: 1024;
 	}
 	.navbar-nav ul {
 		width:240px;
@@ -2031,13 +2039,13 @@ a#nextslide:hover,a#prevslide:hover {
 
 /*** OWL slider home ***/
 .navbar-brand > img{
-    width: auto;
-    height: 60px;
-    margin-left: auto;
-    display: block;
-    z-index: 5;
-    margin-right: auto;
-    top: 10px;
+	width: auto;
+	height: 50px;
+	margin-left: auto;
+	display: block;
+	z-index: 5;
+	margin-right: auto;
+	top: 5px;
 }
 @media screen and (max-width: 1024px){
     .navbar-brand > img{
@@ -2886,7 +2894,7 @@ textarea#comments {
 	#verify {
 		margin-left:15px;
 		margin-top:0;
-	}	
+	}
 }
 @media(min-width:992px) {}
 @media(min-width:1024px) {}
@@ -3043,7 +3051,7 @@ a.btnSwitcher {
 .btnSwitcher:hover {
 	border-color:#eee;
 	background:#eee;
-} 
+}
 /* font icon test */
 ul.iconsTest {
 	margin:0 0 22px 0;
@@ -3292,7 +3300,7 @@ p.credits {
 @media(max-width:767px){
 	.img-responsive {
 		width:100%;
-	}	
+	}
 }
 
 @media(min-width:768px){}
@@ -3448,7 +3456,7 @@ p.credits {
 body,
 main {
     color:#000;
-    background:#fefefe;
+    background:#FAFAFA;
 }
 body.common-home{
     overflow-x: hidden;
@@ -3781,6 +3789,7 @@ ul.quickMenu li a:hover {
     #mainMenu .navbar-nav li.dropdownSubmenu{
         margin: 0;
         border-left: 1px solid #222;
+				border-right: 1px solid #222;
         display: block;
     }
     #mainMenu .navbar-nav li.dropdownSubmenu.thirdLevel {
@@ -4571,7 +4580,7 @@ label.error {
 }
 /* END NEKO CSS FRAMEWORK================================================== */
 img.about-image{
-    height: auto; 
+    height: auto;
     width: 450px;
     display: inline-block;
 }
@@ -4660,4 +4669,95 @@ ul.about-list{
         width: 100%;
         top: -20px;
     }
+}
+.review-block img {
+	max-width: 100%;
+	margin: 20px;
+}
+.review-block .title {
+
+}
+.review-block section {
+
+}
+div#instagram-feed {
+	height: 185px;
+	overflow: hidden;
+	width: 95%;
+	margin-left: auto;
+  margin-right: auto;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+div#instagram-feed-title {
+	padding-top: 20px;
+}
+div#instagram-feed ul {
+	white-space: nowrap;
+	overflow-x: scroll;
+	overflow-y: hidden;
+}
+div#instagram-feed ul li {
+	display: inline-block;
+	max-width: 320px;
+	text-align: center;
+	height: 213px;
+	margin: 0 5px 0 5px;
+}
+div#instagram-feed img {
+	max-height: 150px;
+}
+div#reviews, div#reviews-title, div#badge-showcase {
+	background-color: #FFFFFF;
+}
+div#reviews {
+	padding-bottom: 20px;
+	-webkit-box-shadow: 3px 3px 3px 0px rgba(170,170,170,0.3);
+	-moz-box-shadow: 3px 3px 3px 0px rgba(170,170,170,0.3);
+	box-shadow: 3px 3px 3px 0px rgba(170,170,170,0.3);
+}
+div#reviews img {
+	-webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(100%);
+	-webkit-transition: all 0.2s ease;
+	-moz-transition: all 0.2s ease;
+	-o-transition: all 0.2s ease;
+	transition: all 0.2s ease;
+}
+div#reviews img.active {
+	-webkit-filter: none; /* Safari 6.0 - 9.0 */
+  filter: none;
+}
+div#reviews .review-block-item {
+	position: absolute;
+	opacity: 0.0;
+	left: -50%;
+	top: 0;
+	-webkit-transition: opacity 0.2s ease;
+	-moz-transition: opacity 0.2s ease;
+	-o-transition: opacity 0.2s ease;
+	transition: opacity 0.2s ease;
+}
+div#reviews .review-block {
+	position: relative;
+	left: 50%;
+	top: -185px;
+}
+div#reviews .review-block h1.accent {
+	color: #74000D;
+}
+div#reviews .review-block-item.active {
+	opacity: 1;
+}
+div#reviews .cat-photos {
+	top: -120px;
+}
+div#reviews-title {
+	padding-top: 20px;
+	-webkit-box-shadow: 0px -3px 3px 0px rgba(170,170,170,0.3);
+	-moz-box-shadow: 0px -3px 3px 0px rgba(170,170,170,0.3);
+	box-shadow: 0px -3px 3px 0px rgba(170,170,170,0.3);
+}
+.unslider {
+	padding: 20px 0 20px 0 !important;
 }

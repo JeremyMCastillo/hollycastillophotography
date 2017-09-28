@@ -17,17 +17,17 @@
 </div>
 <div class="row text-center" id="reviews">
   <div class="cat-photos col-lg-12">
-    <?php $first = true; ?>
+    <?php $index = 0; ?>
     <?php foreach($reviews as $review) { ?>
-          <img class="<?php echo $first ? 'active' : ''; ?>" src="<?php echo HTTPS_SERVER . 'image/' . $review['image']; ?>" />
-          <?php $first = false; ?>
+          <img data-review="<?php echo $index; ?>" class="<?php echo ($index == 0 ? 'active ' : ' '); ?>" src="<?php echo HTTPS_SERVER . 'image/' . $review['image']; ?>" />
+          <?php $index++; ?>
     <?php } ?>
   </div>
   <div class="col-xs-12 review-block">
     <div class="row">
-        <?php $first = true; ?>
+        <?php $index = 0; ?>
         <?php foreach($reviews as $review) { ?>
-          <div class="col-xs-12 review-block-item <?php echo $first ? 'active' : ''; ?>">
+          <div data-review="<?php echo $index; ?>" class="col-xs-12 review-block-item <?php echo ($index == 0 ? 'active ' : ' '); ?>">
             <div class="row">
               <div class="col-xs-12"><h1 class="accent"><?php echo $review['author']; ?></h1></div>
             </div>
@@ -35,7 +35,7 @@
               <div class="col-xs-12"><section><?php echo $review['text']; ?></section></div>
             </div>
         </div>
-        <?php $first = false; ?>
+        <?php $index++; ?>
         <?php } ?>
     </div>
   </div>
@@ -45,9 +45,13 @@
     <h2>Follow Me On Instagram!</h2>
   </div>
 </div>
-<div class="row" id="instagram-feed">
-  <ul class="carousel">
-  </ul>
+<div class="row text-center" id="instagram-feed">
+  <span id="scroll-left"><i class="icon-angle-left"></i></span>
+  <span class="carousel-wrap">
+    <ul class="carousel">
+    </ul>
+  </span>
+  <span id="scroll-right"><i class="icon-angle-right"></i></span>
 </div>
 <div id="badge-showcase">
     <div class="row">

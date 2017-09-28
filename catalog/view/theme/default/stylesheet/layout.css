@@ -994,6 +994,7 @@ hr {
 
 body {
     padding-top:75px;
+		position: relative;
 }
 /*** MEDIA QUERIES ***/
 @media(max-width:767px) {
@@ -3999,13 +4000,6 @@ footer{
     padding-top: 15px;
 }
 #badge-showcase img {
-    width: 145px;
-    -webkit-transition: width 0.2s ease;
-    -moz-transition: width 0.2s ease;
-    -o-transition: width 0.2s ease;
-    transition: width 0.2s ease;
-}
-#badge-showcase img:hover {
     width: 150px;
 }
 footer a, footer i{
@@ -4683,19 +4677,45 @@ ul.about-list{
 div#instagram-feed {
 	height: 185px;
 	overflow: hidden;
-	width: 95%;
 	margin-left: auto;
   margin-right: auto;
 	margin-top: 10px;
 	margin-bottom: 10px;
+	position: relative;
 }
 div#instagram-feed-title {
 	padding-top: 20px;
 }
 div#instagram-feed ul {
 	white-space: nowrap;
-	overflow-x: scroll;
-	overflow-y: hidden;
+	padding: 0;
+	-webkit-transition: none;
+	-moz-transition: none;
+	-o-transition: none;
+	transition: none;
+	right: 0;
+	display: inline-block;
+}
+div#instagram-feed .carousel-wrap {
+	display: inline-block;
+	position: relative;
+	overflow: hidden;
+	width: 90%;
+	margin-left: auto;
+	margin-right: auto;
+}
+span#scroll-left, span#scroll-right {
+	position: absolute;
+	top: 30%;
+	color: #74000D;
+	cursor: pointer;
+	font-size: 50px;
+}
+span#scroll-left {
+	left: 1%;
+}
+span#scroll-right {
+	right: 1%;
 }
 div#instagram-feed ul li {
 	display: inline-block;
@@ -4741,7 +4761,7 @@ div#reviews .review-block-item {
 div#reviews .review-block {
 	position: relative;
 	left: 50%;
-	top: -185px;
+	top: -135px;
 }
 div#reviews .review-block h1.accent {
 	color: #74000D;
@@ -4751,6 +4771,8 @@ div#reviews .review-block-item.active {
 }
 div#reviews .cat-photos {
 	top: -120px;
+	cursor: pointer;
+	margin-bottom: -80px;
 }
 div#reviews-title {
 	padding-top: 20px;

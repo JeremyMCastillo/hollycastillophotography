@@ -8,13 +8,13 @@ class ControllerCommonHome extends Controller {
 		$this->document->setDescription($this->config->get('config_meta_description'));
 		$this->document->setKeywords($this->config->get('config_meta_keyword'));
 
-        // Unslider
-        $this->document->addStyle('catalog/view/javascript/plugins/unslider/css/unslider.css');
-        $this->document->addStyle('catalog/view/javascript/plugins/unslider/css/unslider-dots.css');
-        $this->document->addScript('catalog/view/javascript/plugins/unslider/js/unslider.js');
+    // Unslider
+    $this->document->addStyle('catalog/view/javascript/plugins/unslider/css/unslider.css');
+    $this->document->addStyle('catalog/view/javascript/plugins/unslider/css/unslider-dots.css');
+    $this->document->addScript('catalog/view/javascript/plugins/unslider/js/unslider.js');
 
 
-        $this->document->addScript('catalog/view/javascript/pages/common/home.js');
+    $this->document->addScript('catalog/view/javascript/pages/common/home.js');
 
 		if (isset($this->request->get['route'])) {
 			$this->document->addLink(HTTP_SERVER, 'canonical');

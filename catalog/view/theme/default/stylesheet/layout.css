@@ -809,6 +809,9 @@ body {
 	padding:0;
 	padding-top:81px;
 }
+#globalWrapper {
+	overflow-x: hidden;
+}
 h1,h2,h3,h4,h5,h6,legend {
 	font-family:'Roboto',sans-serif;
 	font-weight:300;
@@ -4749,7 +4752,7 @@ div#reviews, div#reviews-title, div#badge-showcase {
 }
 div#reviews {
 	position: relative;
-	padding-bottom: 20px;
+	padding-bottom: 95px;
 	-webkit-box-shadow: 3px 3px 3px 0px rgba(170,170,170,0.3);
 	-moz-box-shadow: 3px 3px 3px 0px rgba(170,170,170,0.3);
 	box-shadow: 3px 3px 3px 0px rgba(170,170,170,0.3);

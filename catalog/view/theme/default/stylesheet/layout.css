@@ -2046,7 +2046,7 @@ a#nextslide:hover,a#prevslide:hover {
 	display: block;
 	z-index: 5;
 	margin-right: auto;
-	top: 5px;
+	top: 0;
 }
 @media screen and (max-width: 1024px){
     .navbar-brand > img{
@@ -2055,7 +2055,7 @@ a#nextslide:hover,a#prevslide:hover {
 }
 @media screen and (max-width: 1349px){
     .navbar-header .navbar-brand > img{
-        height: 65px;
+        height: 50px;
         -webkit-transition: height 0.2s ease;
         -moz-transition: height 0.2s ease;
         -o-transition: height 0.2s ease;
@@ -4004,12 +4004,15 @@ footer{
 }
 footer a, footer i{
     display: inline-block;
-    float: left;
     position: relative;
     margin-right: 10px;
     top: 1px;
     font-size: 18px;
     color: #777;
+		left: 20px;
+}
+footer a.instagram {
+	top: -1px;
 }
 footer h1,
 footer h2,
@@ -4647,7 +4650,7 @@ ul.about-list{
     top: -65px;
 }
 @media screen and (max-width: 997px){
-    .cat-photos{
+    .information-information .cat-photos{
         text-align: center;
         width: 75%;
         margin-left: auto;
@@ -4672,7 +4675,10 @@ ul.about-list{
 
 }
 .review-block section {
-
+	white-space: normal;
+	width: 40%;
+	margin-left: auto;
+	margin-right: auto;
 }
 div#instagram-feed {
 	height: 185px;
@@ -4704,18 +4710,29 @@ div#instagram-feed .carousel-wrap {
 	margin-left: auto;
 	margin-right: auto;
 }
-span#scroll-left, span#scroll-right {
+span#scroll-left, span#scroll-right, span#reviews-scroll-left, span#reviews-scroll-right {
 	position: absolute;
-	top: 30%;
 	color: #74000D;
 	cursor: pointer;
 	font-size: 50px;
 }
 span#scroll-left {
 	left: 1%;
+	top: 30%;
 }
 span#scroll-right {
 	right: 1%;
+	top: 30%;
+}
+span#reviews-scroll-left {
+	top: 10%;
+	left: 6%;
+	display: none;
+}
+span#reviews-scroll-right {
+	top: 10%;
+	right: 6%;
+	display: none;
 }
 div#instagram-feed ul li {
 	display: inline-block;
@@ -4731,6 +4748,7 @@ div#reviews, div#reviews-title, div#badge-showcase {
 	background-color: #FFFFFF;
 }
 div#reviews {
+	position: relative;
 	padding-bottom: 20px;
 	-webkit-box-shadow: 3px 3px 3px 0px rgba(170,170,170,0.3);
 	-moz-box-shadow: 3px 3px 3px 0px rgba(170,170,170,0.3);
@@ -4743,6 +4761,7 @@ div#reviews img {
 	-moz-transition: all 0.2s ease;
 	-o-transition: all 0.2s ease;
 	transition: all 0.2s ease;
+	cursor: pointer;
 }
 div#reviews img.active {
 	-webkit-filter: none; /* Safari 6.0 - 9.0 */
@@ -4761,7 +4780,8 @@ div#reviews .review-block-item {
 div#reviews .review-block {
 	position: relative;
 	left: 50%;
-	top: -135px;
+	top: -95px;
+	margin-bottom: 50px;
 }
 div#reviews .review-block h1.accent {
 	color: #74000D;
@@ -4771,8 +4791,58 @@ div#reviews .review-block-item.active {
 }
 div#reviews .cat-photos {
 	top: -120px;
-	cursor: pointer;
-	margin-bottom: -80px;
+	margin-bottom: -40px;
+}
+@media screen and (max-width: 1100px){
+	#home-slider-wrap img {
+		border-radius: 0;
+	}
+	div#reviews .review-block {
+		margin-bottom: 100px;
+	}
+}
+@media screen and (max-width: 997px){
+	div#reviews .cat-photos {
+		top: -35px;
+		margin-bottom: 90px;
+	}
+	div#instagram-feed .carousel-wrap {
+		width: 80%;
+	}
+	.review-block section {
+		width: 60%;
+	}
+}
+@media screen and (max-width: 700px){
+	span#reviews-scroll-left, span#reviews-scroll-right {
+		display: inline-block;
+	}
+	div#reviews .cat-photos {
+		margin-bottom: 350px;
+		width: 0;
+		position: relative;
+		left: 50%;
+	}
+	div#reviews .cat-photos img {
+		position: absolute;
+		top: 0;
+		left: -100%;
+		margin: 0;
+		margin-left: -100%;
+		opacity: 0.0;
+	}
+	div#reviews .cat-photos img.active {
+		opacity: 1.0;
+	}
+	div#instagram-feed .carousel-wrap {
+		width: 60%;
+	}
+	div#reviews .review-block {
+		top: -125px;
+	}
+	.review-block section {
+		width: 80%;
+	}
 }
 div#reviews-title {
 	padding-top: 20px;
@@ -4782,4 +4852,13 @@ div#reviews-title {
 }
 .unslider {
 	padding: 20px 0 20px 0 !important;
+}
+h2 a {
+	-webkit-transition: color 0.5s ease;
+	-moz-transition: color 0.5s ease;
+	-o-transition: color 0.5s ease;
+	transition: color 0.5s ease;
+}
+h2 a:hover {
+	color: #74000D;
 }

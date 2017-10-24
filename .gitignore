@@ -5,3 +5,5 @@ php.ini
 BLOGFILES/
 image/
 images/
+system/cache
+system/storage/cache

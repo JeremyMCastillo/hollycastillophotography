@@ -50,16 +50,26 @@ jQuery(function($){
      if(leftValue <= 0){
        return;
      }
-     leftValue -= 80;
+     leftValue -= 120;
      animate();
    });
    $("#scroll-right").on("click", function(){
-     maxLeft = $(".carousel-wrap").outerWidth() + 250;
+     maxLeft = 0;
+     $(".carousel-wrap img").each(function(){
+       maxLeft += $(this).width();
+     });
+     maxLeft -= ($(".carousel-wrap").width() - $(".carousel-wrap img").last().width() - 50);
      if(leftValue >= maxLeft){
        return;
      }
-     leftValue += 80;
+     leftValue += 120;
      animate();
+   });
+   $("#reviews-scroll-left").on("click", function(){
+      $("#reviews img.active").prev().click();
+   });
+   $("#reviews-scroll-right").on("click", function(){
+     $("#reviews img.active").next().click();
    });
 });
 

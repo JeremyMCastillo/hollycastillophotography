@@ -2,14 +2,14 @@
 <footer>
     <div class="container">
         <div class="row">
-            <div class="col-sm-6 col-lg-offset-4 col-lg-4">
+            <div class="col-xs-6 col-xs-offset-0 col-lg-offset-4 col-lg-4">
                 <p>Holly Castillo Photography</p>
             </div>
-            <div class="col-sm-6 col-lg-4">
+            <div class="col-sm-6 col-lg-2">
                 <a href="https://www.facebook.com/hollycastillophotography" target="_blank">
                    <i class="icon-facebook-1"></i>
                 </a>
-                <a href="https://www.instagram.com/hollycastillophotography/" target="_blank">
+                <a class="instagram" href="https://www.instagram.com/hollycastillophotography/" target="_blank">
                    <i class="fa fa-instagram"></i>
                 </a>
             </div>

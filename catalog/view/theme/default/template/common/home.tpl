@@ -16,7 +16,8 @@
   </div>
 </div>
 <div class="row text-center" id="reviews">
-  <div class="cat-photos col-lg-12">
+  <span id="reviews-scroll-left"><i class="icon-angle-left"></i></span>
+  <div class="cat-photos col-xs-12 col-sm-8 col-sm-offset-2 col-md-12 col-md-offset-0">
     <?php $index = 0; ?>
     <?php foreach($reviews as $review) { ?>
           <img data-review="<?php echo $index; ?>" class="<?php echo ($index == 0 ? 'active ' : ' '); ?>" src="<?php echo HTTPS_SERVER . 'image/' . $review['image']; ?>" />
@@ -39,10 +40,11 @@
         <?php } ?>
     </div>
   </div>
+  <span id="reviews-scroll-right"><i class="icon-angle-right"></i></span>
 </div>
 <div id="instagram-feed-title" class="row">
   <div class="col-xs-12 text-center">
-    <h2>Follow Me On Instagram!</h2>
+    <h2>Follow Me On <a href="https://www.instagram.com/hollycastillophotography/">Instagram!</a></h2>
   </div>
 </div>
 <div class="row text-center" id="instagram-feed">
@@ -53,35 +55,19 @@
   </span>
   <span id="scroll-right"><i class="icon-angle-right"></i></span>
 </div>
-<div id="badge-showcase">
-    <div class="row">
-        <div class="col-xs-6 col-sm-4 col-lg-2 col-xs-offset-3">
-            <a target="_blank" href="https://www.loveandlavender.com/2017/04/styled-wedding-vintage-romantic-tea-party-shoot/">
-                <img src="image/pages/common/loveandlavender.png" />
-            </a>
-        </div>
-        <div class="col-xs-6 col-sm-4 col-lg-2">
-            <a target="_blank" href="https://www.borrowedandblue.com/santa-barbara/wedding-photographers/holly-castillo-photography">
-                <img src="image/pages/common/borrowedandblue.png" />
-            </a>
-        </div>
-        <div class="col-xs-12 col-sm-6 col-lg-2">
-            <a target="_blank" href="http://www.intimateweddings.com/blog/woodland-fairy-tale-elopement-styled-shoot/">
-                <img src="image/pages/common/intimateweddings.png" />
-            </a>
-        </div>
-    </div>
-</div>
 <script type="text/javascript">
   $(function(){
     $.ajax({
       url: '<?php echo $instagram_endpoint; ?>',
       dataType: 'json',
       success: function(json){
+        if(!json){
+          $("#instagram-feed, #instagram-feed-title").remove();
+        }
         console.log(json);
         for(var i in json){
           var html = "<li>";
-          html += "<img src='" + json[i]['images']['low_resolution']['url'] + "' />";
+          html += "<a target='_blank' href='" + json[i]['link'] + "'><img src='" + json[i]['images']['low_resolution']['url'] + "' /></a>";
           html += "</li>";
           $("#instagram-feed ul").append(html);
         }
